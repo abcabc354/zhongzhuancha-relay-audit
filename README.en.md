@@ -108,6 +108,7 @@ python -m pytest -q
 - [Scoring](docs/scoring.md)
 - [Architecture](docs/architecture.md)
 - [FAQ](docs/faq.md)
+- [Examples](docs/examples.md)
 
 ## Contributing and security
 
