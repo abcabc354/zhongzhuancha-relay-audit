@@ -102,6 +102,13 @@ pip install httpx pytest
 python -m pytest -q
 ```
 
+## Docs
+
+- [Checks](docs/checks.md)
+- [Scoring](docs/scoring.md)
+- [Architecture](docs/architecture.md)
+- [FAQ](docs/faq.md)
+
 ## Contributing and security
 
 - [Contributing](.github/CONTRIBUTING.md)
