@@ -24,11 +24,11 @@
 </p>
 
 <p align="center">
-  <img src="docs/assets/terminal-demo.png" width="49%" alt="terminal demo">
+  <img src="docs/assets/demo.gif" width="49%" alt="terminal demo">
   <img src="docs/assets/report-preview-wide.png" width="49%" alt="report preview">
 </p>
 
-<p align="center"><em>左：真实命令输出；右：报告预览。主分、协议附录和检查明细分开呈现。</em></p>
+<p align="center"><em>左：真实命令输出的逐字动画；右：报告预览。主分、协议附录和检查明细分开呈现。</em></p>
 
 ## 关于
 

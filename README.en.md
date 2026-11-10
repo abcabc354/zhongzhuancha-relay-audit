@@ -24,11 +24,11 @@
 </p>
 
 <p align="center">
-  <img src="docs/assets/terminal-demo.png" width="49%" alt="terminal demo">
+  <img src="docs/assets/demo.gif" width="49%" alt="terminal demo">
   <img src="docs/assets/report-preview-wide.png" width="49%" alt="report preview">
 </p>
 
-<p align="center"><em>Left: real command output. Right: report preview. Usability score, protocol appendix and check details are separate.</em></p>
+<p align="center"><em>Left: animated from real command output. Right: report preview. Usability score, protocol appendix and check details are separate.</em></p>
 
 ## About
 
