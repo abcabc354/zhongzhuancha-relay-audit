@@ -5,7 +5,7 @@
 
 > 这个仓库只包含审计子集，不包含完整 `relay_check` legacy 工具链，也不包含任何 API key/证据。
 
-[网站](https://zhongzhuancha.com/) · [安装](#安装) · [命令](#命令) · [报告](#报告)
+[网站](https://zhongzhuancha.com/) · [Live demo](https://abcabc354.github.io/relay-audit/demo/) · [安装](#安装) · [命令](#命令) · [报告](#报告)
 
 [![Python 3.11+](docs/assets/badges/python.svg)](https://www.python.org/) [![Responses + Chat](docs/assets/badges/protocol.svg)](#协议自适应) [![Status](docs/assets/badges/public.svg)](#) [![License](docs/assets/badges/license.svg)](LICENSE) [![CI](https://github.com/abcabc354/relay-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/abcabc354/relay-audit/actions/workflows/ci.yml)
 
@@ -24,6 +24,15 @@
 
 - **主分**只看可用性；
 - **附录**记录协议契约、错误码和包装，作为证据，不直接影响主分。
+
+## 在线 Demo
+
+脱敏样例，不需要安装：
+
+- [Demo 首页](https://abcabc354.github.io/relay-audit/demo/)
+- [单站报告](https://abcabc354.github.io/relay-audit/demo/report.html)
+- [多站对比](https://abcabc354.github.io/relay-audit/demo/compare.html)
+- [历史趋势](https://abcabc354.github.io/relay-audit/demo/trend.html)
 
 ## 命令
 

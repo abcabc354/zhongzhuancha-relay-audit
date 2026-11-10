@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中转查 · 协议面审计 — relay-a</title>
+<style>
+:root { --bg:#f6f7f9; --panel:#fff; --ink:#1f2328; --muted:#667085; --line:#e4e7ec;
+         --pass:#137a4b; --warn:#a15c00; --fail:#b42318; --info:#475467; --na:#98a2b3; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink);
+        font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif; }
+.wrap { max-width:1080px; margin:0 auto; padding:32px 20px 64px; }
+header { margin-bottom:24px; }
+h1 { font-size:28px; margin:0 0 8px; letter-spacing:-.02em; }
+.meta { color:var(--muted); font-size:14px; }
+.meta span { margin-right:16px; white-space:nowrap; }
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:20px 0 28px; }
+.card { background:var(--panel); border:1px solid var(--line); border-radius:12px;
+         padding:16px 18px; }
+.label { color:var(--muted); font-size:13px; margin-bottom:8px; }
+.value { font-size:22px; font-weight:650; }
+.badge { display:inline-block; padding:3px 10px; border-radius:999px; font-size:13px;
+          font-weight:600; }
+.badge.pass { background:#e7f6ee; color:var(--pass); }
+.badge.warn { background:#fff4e5; color:var(--warn); }
+.badge.fail { background:#fee4e2; color:var(--fail); }
+.badge.info, .badge.na { background:#eef0f3; color:var(--info); }
+section { background:var(--panel); border:1px solid var(--line); border-radius:12px;
+           padding:20px; margin-bottom:18px; }
+.intro { border-left:3px solid #1f5fbf; background:linear-gradient(135deg,#f8fbff,#fff); }
+.lede { font-size:16px; margin:0 0 6px; }
+h2 { font-size:18px; margin:0 0 14px; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line);
+          vertical-align:top; }
+th { color:var(--muted); font-weight:600; background:#fafbfc; }
+tr:last-child td { border-bottom:0; }
+code { background:#f2f4f7; border-radius:5px; padding:1px 5px; font-size:13px; }
+.obs { display:grid; grid-template-columns:180px 1fr; gap:8px; padding:7px 0;
+        border-bottom:1px dashed var(--line); }
+.obs:last-child { border-bottom:0; }
+.obs .k { color:var(--muted); }
+.note { color:var(--muted); font-size:13px; }
+footer { color:var(--muted); font-size:12px; margin-top:24px; }
+footer a { color:#1f5fbf; text-decoration:none; }
+footer .brand { margin-top:6px; }
+@media (max-width:720px) { .cards { grid-template-columns:1fr; } .obs { grid-template-columns:1fr; } }
+@media print { body { background:#fff; } section, .card { break-inside:avoid; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>中转查 · 协议面审计</h1>
+  <div class="meta">
+    <span>目标：https://relay-a.example/v1</span>
+    <span>型号：gpt-6.1-sol</span>
+    <span>模式：responses</span>
+    <span>生成：2026-11-09T18:53:13.914+08:00</span>
+  </div>
+</header>
+<section class="intro">
+  <p class="lede">这是中转查对 <strong>relay-a</strong> 的协议面与可用性快照。
+  它只回答“能不能用、协议面是否像官方”，不认证型号身份。</p>
+  <p class="note">主分只看稳定性、对话、能力、目录；协议契约、错误码和包装在附录，不计入主分。</p>
+</section>
+<div class="cards"><div class="card"><div class="label">协议面</div><div class="value"><span class="badge fail">inconsistent</span></div></div><div class="card"><div class="label">可用性</div><div class="value"><span class="badge pass">A (100%)</span></div></div><div class="card"><div class="label">型号身份</div><div class="value"><span class="badge na">无法判定</span></div></div></div>
+<section>
+  <h2>可用性记分卡</h2>
+  <table><thead><tr><th>目标</th><th>型号</th><th>稳定性</th><th>对话</th><th>能力</th><th>目录</th><th>总分</th></tr></thead>
+  <tbody><tr><td>relay-a</td><td>gpt-6.1-sol</td><td>pass 100% (3/3)</td><td>pass 100% (4/4)</td><td>pass 100% (4/4)</td><td>pass 100% (1/1)</td><td>A</td></tr></tbody></table>
+  <p class="note">主分只看能不能用：稳定性、对话、能力、目录；协议细节在下面附录，不计入主分。</p>
+</section>
+<section>
+  <h2>附录：协议细节（不计入主分）</h2>
+  <table><thead><tr><th>目标</th><th>包装</th><th>协议契约</th><th>错误码</th></tr></thead>
+  <tbody><tr><td>relay-a</td><td>warn 50% (1/2)</td><td>fail 0% (0/4)</td><td>pass 100% (3/3)</td></tr></tbody></table>
+</section>
+<section>
+  <h2>检查明细</h2>
+  <table><thead><tr><th>检查</th><th>结果</th><th>说明</th></tr></thead>
+  <tbody><tr><td><code>responses.surface</code></td><td><span class="badge pass">pass</span></td><td>Responses surface returned a completed response</td></tr><tr><td><code>responses.attribution</code></td><td><span class="badge pass">pass</span></td><td>usage.attribution present</td></tr><tr><td><code>responses.reasoning_items</code></td><td><span class="badge info">info</span></td><td>no reasoning item in this short call</td></tr><tr><td><code>responses.final_answer</code></td><td><span class="badge pass">pass</span></td><td>message phase=final_answer</td></tr><tr><td><code>wrapper.instructions</code></td><td><span class="badge info">info</span></td><td>relay injects 21334 chars of instructions</td></tr><tr><td><code>wrapper.persona</code></td><td><span class="badge warn">warn</span></td><td>injected instructions declare Codex/GPT-5 persona</td></tr><tr><td><code>reasoning.scaling</code></td><td><span class="badge pass">pass</span></td><td>reasoning tokens increase with effort</td></tr><tr><td><code>previous.roundtrip</code></td><td><span class="badge warn">warn</span></td><td>previous_response_id failed with 400 (upstream), not counted as a contract violation</td></tr><tr><td><code>invalid.parameter</code></td><td><span class="badge fail">fail</span></td><td>invalid reasoning.effort &quot;none&quot; was accepted (official gpt-6.1-sol rejects it)</td></tr><tr><td><code>error.invalid_model</code></td><td><span class="badge pass">pass</span></td><td>invalid model rejected with an official-looking error</td></tr><tr><td><code>error.invalid_cap</code></td><td><span class="badge pass">pass</span></td><td>max_output_tokens=0 rejected as invalid_request_error</td></tr><tr><td><code>error.unauthorized</code></td><td><span class="badge pass">pass</span></td><td>missing credential rejected with an auth error</td></tr><tr><td><code>output.cap</code></td><td><span class="badge fail">fail</span></td><td>max_output_tokens was ignored (returned more tokens than the cap)</td></tr><tr><td><code>image.vision</code></td><td><span class="badge pass">pass</span></td><td>image input answered correctly</td></tr><tr><td><code>chat.surface</code></td><td><span class="badge pass">pass</span></td><td>Chat Completions surface works</td></tr><tr><td><code>catalog.liveness</code></td><td><span class="badge pass">pass</span></td><td>all sampled catalog models answered</td></tr><tr><td><code>usage.stability</code></td><td><span class="badge pass">pass</span></td><td>input_tokens stable across repeats</td></tr><tr><td><code>wrapper.shared</code></td><td><span class="badge pass">pass</span></td><td>model labels use different instructions</td></tr><tr><td><code>store.echo</code></td><td><span class="badge warn">warn</span></td><td>store flag not echoed as expected</td></tr><tr><td><code>cache.retention</code></td><td><span class="badge pass">pass</span></td><td>prompt_cache_retention accepted</td></tr><tr><td><code>text.verbosity</code></td><td><span class="badge pass">pass</span></td><td>text.verbosity echoed as low</td></tr><tr><td><code>tools.function_call</code></td><td><span class="badge pass">pass</span></td><td>Responses function call produced with expected args</td></tr><tr><td><code>structured.output</code></td><td><span class="badge pass">pass</span></td><td>JSON schema output matched</td></tr><tr><td><code>identity.undetermined</code></td><td><span class="badge info">info</span></td><td>protocol surface only; model identity is not authenticated</td></tr></tbody></table>
+</section>
+<section>
+  <h2>关键观测</h2>
+  <div class="obs"><div class="k">模式</div><div class="v">responses</div></div><div class="obs"><div class="k">Responses 状态</div><div class="v">200</div></div><div class="obs"><div class="k">输出类型</div><div class="v">[&#x27;message&#x27;]</div></div><div class="obs"><div class="k">instructions</div><div class="v">21334 字符</div></div><div class="obs"><div class="k">usage</div><div class="v">{&quot;attribution_present&quot;: true, &quot;cached_tokens&quot;: 3801, &quot;input_tokens&quot;: 4387, &quot;output_tokens&quot;: 14, &quot;reasoning_tokens&quot;: 0}</div></div><div class="obs"><div class="k">reasoning low/high</div><div class="v">251 / 390</div></div><div class="obs"><div class="k">目录抽检</div><div class="v">{&quot;gpt-6.1-sol&quot;: 200}</div></div><div class="obs"><div class="k">store</div><div class="v">min=False；prev_first=False</div></div>
+</section>
+<section>
+  <h2>证据</h2>
+  <p class="note">源目录：<code>demo/relay-a</code></p>
+  <p class="note">文件：INSTRUCTIONS.txt, PLAN.json, RESULTS.json, SUMMARY.json, manifest.json, manifest.sha256</p>
+</section>
+<footer>
+  本报告只验证协议面/可用性，不认证型号身份；低分不等于型号假，高分也不等于型号真。
+  同门型号替换不在覆盖范围内。
+  <div class="brand">由 <a href="https://zhongzhuancha.com/">中转查</a> 生成。</div>
+</footer>
+</div>
+</body>
+</html>
