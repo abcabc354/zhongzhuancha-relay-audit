@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://abcabc354.github.io/relay-audit/demo/">
+  <a href="https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/">
     <img src="docs/assets/hero.png" width="760" alt="中转查 · relay-audit">
   </a>
 </p>
@@ -11,8 +11,8 @@
 <p align="center">简体中文 ｜ <a href="README.en.md">English</a></p>
 
 <p align="center">
-  <a href="https://abcabc354.github.io/relay-audit/demo/"><img src="docs/assets/buttons/demo.svg" height="42" alt="Live demo"></a>
-  <a href="https://github.com/abcabc354/relay-audit/releases/latest"><img src="docs/assets/buttons/download.svg" height="42" alt="Download wheel"></a>
+  <a href="https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/"><img src="docs/assets/buttons/demo.svg" height="42" alt="Live demo"></a>
+  <a href="https://github.com/abcabc354/zhongzhuancha-relay-audit/releases/latest"><img src="docs/assets/buttons/download.svg" height="42" alt="Download wheel"></a>
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@
   <a href="docs/checks.md"><img src="docs/assets/badges/protocol.svg" alt="Responses + Chat"></a>
   <a href="#"><img src="docs/assets/badges/public.svg" alt="public alpha"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.svg" alt="MIT"></a>
-  <a href="https://github.com/abcabc354/relay-audit/actions/workflows/ci.yml"><img src="https://github.com/abcabc354/relay-audit/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/abcabc354/zhongzhuancha-relay-audit/actions/workflows/ci.yml"><img src="https://github.com/abcabc354/zhongzhuancha-relay-audit/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
 </p>
 
 <p align="center">
@@ -94,7 +94,7 @@ flowchart LR
 - [FAQ](docs/faq.md)
 - [示例](docs/examples.md)
 - [Roadmap](ROADMAP.md)
-- [Live demo](https://abcabc354.github.io/relay-audit/demo/)
+- [Live demo](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/)
 
 ## 参与
 
@@ -105,8 +105,8 @@ flowchart LR
 - [Code of Conduct](.github/CODE_OF_CONDUCT.md)
 
 <p align="center">
-  <a href="https://github.com/abcabc354/relay-audit/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=abcabc354/relay-audit" alt="contributors">
+  <a href="https://github.com/abcabc354/zhongzhuancha-relay-audit/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=abcabc354/zhongzhuancha-relay-audit" alt="contributors">
   </a>
 </p>
 

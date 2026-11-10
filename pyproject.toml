@@ -13,8 +13,8 @@ dependencies = ["httpx"]
 
 [project.urls]
 Homepage = "https://zhongzhuancha.com/"
-Source = "https://github.com/abcabc354/relay-audit"
-Issues = "https://github.com/abcabc354/relay-audit/issues"
+Source = "https://github.com/abcabc354/zhongzhuancha-relay-audit"
+Issues = "https://github.com/abcabc354/zhongzhuancha-relay-audit/issues"
 
 [project.scripts]
 relay-audit = "relay_audit.relay_audit:main"

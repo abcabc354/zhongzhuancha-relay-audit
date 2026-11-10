@@ -5,7 +5,7 @@
 - 协议面：**partial**
 - 可用性：**A (92%)**
 - 硬伤：**0**
-- 报告：[打开在线报告](https://abcabc354.github.io/relay-audit/demo/scenarios/usage-drift/REPORT.html)
+- 报告：[打开在线报告](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/scenarios/usage-drift/REPORT.html)
 
 ## 这是什么
 
@@ -49,4 +49,4 @@
 - 92 不是隐藏权重，是小维度覆盖度的结果
 - 单次漂移不代表长期不稳定
 
-返回：[场景库](index.md) · [Demo](https://abcabc354.github.io/relay-audit/demo/)
+返回：[场景库](index.md) · [Demo](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/)

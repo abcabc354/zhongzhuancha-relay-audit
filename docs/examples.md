@@ -2,10 +2,10 @@
 
 在线 Demo：
 
-- [Demo 首页](https://abcabc354.github.io/relay-audit/demo/)
-- [单站报告](https://abcabc354.github.io/relay-audit/demo/report.html)
-- [多站对比](https://abcabc354.github.io/relay-audit/demo/compare.html)
-- [历史趋势](https://abcabc354.github.io/relay-audit/demo/trend.html)
+- [Demo 首页](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/)
+- [单站报告](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/report.html)
+- [多站对比](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/compare.html)
+- [历史趋势](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/trend.html)
 
 所有样例都是脱敏的 `relay-a` / `relay-b`，不是实时中转数据。
 

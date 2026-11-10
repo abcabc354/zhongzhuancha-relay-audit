@@ -100,7 +100,7 @@ relay-audit --from-audit _evidence/first-run/AUDIT --out _evidence/re-render
 
 ## 8. 下一步
 
-- 多目标：[relay-audit-compare](https://github.com/abcabc354/relay-audit#readme)
-- 历史趋势：[relay-audit-trend](https://github.com/abcabc354/relay-audit#readme)
+- 多目标：[relay-audit-compare](https://github.com/abcabc354/zhongzhuancha-relay-audit#readme)
+- 历史趋势：[relay-audit-trend](https://github.com/abcabc354/zhongzhuancha-relay-audit#readme)
 - 看不同协议面：[场景库](scenarios/index.md)
-- 看报告样例：[Live demo](https://abcabc354.github.io/relay-audit/demo/)
+- 看报告样例：[Live demo](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/)

@@ -5,7 +5,7 @@
 - 协议面：**inconsistent**
 - 可用性：**A (100%)**
 - 硬伤：**1**
-- 报告：[打开在线报告](https://abcabc354.github.io/relay-audit/demo/scenarios/prev-unsupported/REPORT.html)
+- 报告：[打开在线报告](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/scenarios/prev-unsupported/REPORT.html)
 
 ## 这是什么
 
@@ -49,4 +49,4 @@
 - 单轮可用不代表多轮续接可用
 - 这是协议契约问题，不是模型身份问题
 
-返回：[场景库](index.md) · [Demo](https://abcabc354.github.io/relay-audit/demo/)
+返回：[场景库](index.md) · [Demo](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/)

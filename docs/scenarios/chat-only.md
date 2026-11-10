@@ -5,7 +5,7 @@
 - 协议面：**consistent**
 - 可用性：**A (100%)**
 - 硬伤：**0**
-- 报告：[打开在线报告](https://abcabc354.github.io/relay-audit/demo/scenarios/chat-only/REPORT.html)
+- 报告：[打开在线报告](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/scenarios/chat-only/REPORT.html)
 
 ## 这是什么
 
@@ -35,4 +35,4 @@
 - n/a 不是 0 分
 - Chat 模式没有 Responses 契约检查，不能拿它证明 Responses 合规
 
-返回：[场景库](index.md) · [Demo](https://abcabc354.github.io/relay-audit/demo/)
+返回：[场景库](index.md) · [Demo](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/)

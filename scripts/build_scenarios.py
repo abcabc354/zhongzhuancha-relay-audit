@@ -50,7 +50,7 @@ a{{color:var(--blue)}}@media(max-width:720px){{.grid{{grid-template-columns:1fr}
 <div class="grid">
 {cards}
 </div>
-<p class="note">返回 <a href="../">Demo 首页</a> · <a href="https://github.com/abcabc354/relay-audit/tree/main/docs/scenarios">场景文档</a></p>
+<p class="note">返回 <a href="../">Demo 首页</a> · <a href="https://github.com/abcabc354/zhongzhuancha-relay-audit/tree/main/docs/scenarios">场景文档</a></p>
 </div></body></html>
 '''
 

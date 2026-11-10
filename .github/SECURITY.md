@@ -11,7 +11,7 @@
 
 请使用 GitHub 的 **private vulnerability reporting** 私密报告：
 
-**https://github.com/abcabc354/relay-audit/security/advisories/new**
+**https://github.com/abcabc354/zhongzhuancha-relay-audit/security/advisories/new**
 
 不要开公开 issue，也不要在 issue/PR 中粘贴 API key、cookie、完整请求头或 `.local.env` 内容。
 

@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Live demo
-    url: https://abcabc354.github.io/relay-audit/demo/
+    url: https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/
     about: 先看脱敏报告、对比和趋势样例
   - name: 使用说明
-    url: https://github.com/abcabc354/relay-audit#readme
+    url: https://github.com/abcabc354/zhongzhuancha-relay-audit#readme
     about: 安装、命令和报告结构

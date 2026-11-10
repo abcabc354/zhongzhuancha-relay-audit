@@ -5,7 +5,7 @@
 - 协议面：**partial**
 - 可用性：**A (100%)**
 - 硬伤：**0**
-- 报告：[打开在线报告](https://abcabc354.github.io/relay-audit/demo/scenarios/wrapper-shell/REPORT.html)
+- 报告：[打开在线报告](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/scenarios/wrapper-shell/REPORT.html)
 
 ## 这是什么
 
@@ -51,4 +51,4 @@
 - 主分 A 不代表没有壳
 - instructions 只能当线索，不能当身份证据
 
-返回：[场景库](index.md) · [Demo](https://abcabc354.github.io/relay-audit/demo/)
+返回：[场景库](index.md) · [Demo](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/)

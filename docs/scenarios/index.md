@@ -11,4 +11,4 @@
 | [续接不支持](prev-unsupported.md) | `prev-unsupported` | inconsistent | A (100%) | 1 |
 | [同请求用量漂移](usage-drift.md) | `usage-drift` | partial | A (92%) | 0 |
 
-报告在线地址：<https://abcabc354.github.io/relay-audit/demo/scenarios/>
+报告在线地址：<https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/scenarios/>
