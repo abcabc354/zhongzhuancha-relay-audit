@@ -5,7 +5,7 @@
 
 > 这个仓库只包含审计子集，不包含完整 `relay_check` legacy 工具链，也不包含任何 API key/证据。
 
-[网站](https://zhongzhuancha.com/) · [Live demo](https://abcabc354.github.io/relay-audit/demo/) · [安装](#安装) · [命令](#命令) · [报告](#报告) · [Security](.github/SECURITY.md)
+[网站](https://zhongzhuancha.com/) · [Live demo](https://abcabc354.github.io/relay-audit/demo/) · [安装](#安装) · [命令](#命令) · [报告](#报告) · [Contributing](.github/CONTRIBUTING.md) · [Security](.github/SECURITY.md) · [Code of Conduct](.github/CODE_OF_CONDUCT.md)
 
 [![Python 3.11+](docs/assets/badges/python.svg)](https://www.python.org/) [![Responses + Chat](docs/assets/badges/protocol.svg)](#协议自适应) [![Status](docs/assets/badges/public.svg)](#) [![License](docs/assets/badges/license.svg)](LICENSE) [![CI](https://github.com/abcabc354/relay-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/abcabc354/relay-audit/actions/workflows/ci.yml)
 

@@ -1,0 +1,33 @@
+name: Feature request
+description: Suggest a new check, report field or workflow
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: 现在缺什么，为什么需要
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: 期望的命令、报告字段或行为
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: 考虑过的替代方案
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: 这个功能不要求认证模型身份
+          required: false
+        - label: 这个功能不会在报告中保存 API key
+          required: true
