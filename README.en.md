@@ -93,6 +93,7 @@ Docs are in Chinese for now:
 - [Architecture](docs/architecture.md)
 - [FAQ](docs/faq.md)
 - [Examples](docs/examples.md)
+- [Roadmap](ROADMAP.md)
 - [Live demo](https://abcabc354.github.io/relay-audit/demo/)
 
 ## Contributing and security
