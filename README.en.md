@@ -1,35 +1,67 @@
-# Zhongzhuancha · relay-audit
+<p align="center">
+  <a href="https://abcabc354.github.io/relay-audit/demo/">
+    <img src="docs/assets/hero.png" width="760" alt="Zhongzhuancha · relay-audit">
+  </a>
+</p>
 
-[中文](README.md) · English
+<h1 align="center">Zhongzhuancha · relay-audit</h1>
+
+<p align="center">A clean audit-only toolkit for OpenAI-compatible relays: does it work, and does the protocol surface look official?</p>
+
+<p align="center">English ｜ <a href="README.md">中文</a></p>
+
+<p align="center">
+  <a href="https://abcabc354.github.io/relay-audit/demo/"><img src="docs/assets/buttons/demo.svg" height="42" alt="Live demo"></a>
+  <a href="https://github.com/abcabc354/relay-audit/releases/latest"><img src="docs/assets/buttons/download.svg" height="42" alt="Download wheel"></a>
+</p>
+
+<p align="center">
+  <a href="https://www.python.org/"><img src="docs/assets/badges/python.svg" alt="Python 3.11+"></a>
+  <a href="docs/checks.md"><img src="docs/assets/badges/protocol.svg" alt="Responses + Chat"></a>
+  <a href="#"><img src="docs/assets/badges/public.svg" alt="public alpha"></a>
+  <a href="LICENSE"><img src="docs/assets/badges/license.svg" alt="MIT"></a>
+  <a href="https://github.com/abcabc354/relay-audit/actions/workflows/ci.yml"><img src="https://github.com/abcabc354/relay-audit/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+</p>
+
+<p align="center">
+  <img src="docs/assets/terminal-demo.png" width="49%" alt="terminal demo">
+  <img src="docs/assets/report-preview-wide.png" width="49%" alt="report preview">
+</p>
+
+<p align="center"><em>Left: real command output. Right: report preview. Usability score, protocol appendix and check details are separate.</em></p>
+
+## About
 
 **Zhongzhuancha** ([zhongzhuancha.com](https://zhongzhuancha.com/)) is an AI relay directory and review site.
-This repository is its **clean audit-only toolkit**: it checks whether an OpenAI-compatible relay works and whether its protocol surface looks like the official one.
+This repository is its **clean audit-only** toolkit: it answers “does it work, and does the protocol surface look official?” It does not authenticate model identity.
 
-> It does not authenticate model identity and does not claim a model is “real” or “fake”. It separates protocol, capability, catalog and stability so you can inspect them.
+- Probes `/responses` first and falls back to Chat-only;
+- main score covers stability, dialogue, capability and catalog;
+- protocol contracts, error shapes and wrapper details live in the appendix;
+- no API keys, evidence or real reports are bundled; the full legacy `relay_check` toolkit is not included.
 
-[Website](https://zhongzhuancha.com/) · [Live demo](https://abcabc354.github.io/relay-audit/demo/) · [Install](#install) · [Commands](#commands) · [Report](#report) · [Security](.github/SECURITY.md)
+If this project helps you, a Star :star: is appreciated.
 
-[![Python 3.11+](docs/assets/badges/python.svg)](https://www.python.org/) [![Responses + Chat](docs/assets/badges/protocol.svg)](#protocol-auto-detection) [![Status](docs/assets/badges/public.svg)](#) [![License](docs/assets/badges/license.svg)](LICENSE) [![CI](https://github.com/abcabc354/relay-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/abcabc354/relay-audit/actions/workflows/ci.yml)
+## What it answers
 
-![Report preview](docs/assets/report-preview.png)
-
-*Report preview: the usability score, protocol appendix and check details are shown separately.*
-
-## Commands
-
-| Command | Purpose |
+| Answers | Does not answer |
 |---|---|
-| `relay-audit` | one audit, scorecard, HTML/Markdown report |
-| `relay-audit-compare` | compare multiple audit snapshots |
-| `relay-audit-trend` | historical trend for one target |
-| `relay-inspect` | config-driven daily inspection |
+| Is the Responses / Chat surface usable? | Which exact model weights are behind it |
+| Do streaming, tools, structured output and vision work? | Same-family model swaps (e.g. 6-sol for 6.1-sol) |
+| Is usage stable across identical requests? | Whether the provider is “official” |
+| Are catalog models actually callable? | Billing, refunds or service guarantees |
+| Do protocol parameters work; do error shapes look official? | — |
 
-## Install
+## Quick start
 
 ```sh
-python3.11 -m venv .venv-audit
-. .venv-audit/bin/activate
+python3.11 -m venv .venv
+. .venv/bin/activate
 pip install relay_audit-0.1.2-py3-none-any.whl
+
+relay-audit --base-url https://relay.example/v1 \
+  --api-key-file config/relay-a.local.env \
+  --out _evidence/report --enable-remote
 ```
 
 Or from source:
@@ -38,29 +70,7 @@ Or from source:
 pip install -e .
 ```
 
-## Quick start
-
-```sh
-relay-audit --base-url https://relay.example/v1 \
-  --api-key-file config/relay-a.local.env \
-  --out _evidence/report --enable-remote
-
-# re-render a report from existing evidence, no requests
-relay-audit --from-audit _evidence/audit-xxx --out _evidence/report-2
-```
-
-## Terminal demo
-
-![terminal demo](docs/assets/terminal-demo.png)
-
-*Real command output. Exit code 2 means the protocol surface is inconsistent; the report is still generated.*
-
-## Protocol auto-detection
-
-The tool probes `/responses` first:
-
-- available → Responses suite;
-- unavailable → automatic Chat fallback.
+## Workflow
 
 ```mermaid
 flowchart LR
@@ -74,47 +84,34 @@ flowchart LR
     F --> H[compare / trend]
 ```
 
-## Report
-
-Each audit directory contains:
-
-- `REPORT.html` — self-contained HTML;
-- `REPORT.md`;
-- `SCORECARD.md/.json`;
-- `SUMMARY.json`;
-- `AUDIT/` evidence and `manifest.json`.
-
-The usability score covers stability, dialogue, capability and catalog. Protocol contracts, error shapes and wrapper details live in the appendix and do not change the main score.
-
-## Scope
-
-- No model identity authentication;
-- low score does not mean a model is fake; high score does not prove it is genuine;
-- same-family model swaps cannot be excluded;
-- self-reported persona/instructions are clues, not identity evidence.
-
-## Development
-
-```sh
-python3.11 -m venv .venv
-. .venv/bin/activate
-pip install httpx pytest
-python -m pytest -q
-```
-
 ## Docs
+
+Docs are in Chinese for now:
 
 - [Checks](docs/checks.md)
 - [Scoring](docs/scoring.md)
 - [Architecture](docs/architecture.md)
 - [FAQ](docs/faq.md)
 - [Examples](docs/examples.md)
+- [Live demo](https://abcabc354.github.io/relay-audit/demo/)
 
 ## Contributing and security
 
 - [Contributing](.github/CONTRIBUTING.md)
 - [Security Policy](.github/SECURITY.md)
 - [Code of Conduct](.github/CODE_OF_CONDUCT.md)
+
+<p align="center">
+  <a href="https://github.com/abcabc354/relay-audit/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=abcabc354/relay-audit" alt="contributors">
+  </a>
+</p>
+
+## Scope
+
+- A low score does not mean a model is fake; a high score does not prove it is genuine;
+- same-family model swaps cannot be excluded;
+- self-reported persona/instructions are clues, not identity evidence.
 
 ## License
 
