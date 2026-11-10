@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relay-audit"
+version = "0.1.2"
+description = "Zhongzhuancha clean audit-only toolkit for OpenAI-compatible relays"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = ["httpx"]
+
+[project.urls]
+Homepage = "https://zhongzhuancha.com/"
+Source = "https://github.com/abcabc354/relay-audit"
+Issues = "https://github.com/abcabc354/relay-audit/issues"
+
+[project.scripts]
+relay-audit = "relay_audit.relay_audit:main"
+relay-audit-compare = "relay_audit.relay_compare:main"
+relay-audit-trend = "relay_audit.relay_trend:main"
+relay-inspect = "relay_audit.relay_inspect:main"
+
+[tool.setuptools.packages.find]
+include = ["relay_audit*"]
+
+[tool.setuptools]
+license-files = ["LICENSE"]
