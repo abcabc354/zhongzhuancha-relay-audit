@@ -1,5 +1,7 @@
 # 中转查 · relay-audit
 
+[English](README.en.md) · 中文
+
 **中转查**（[zhongzhuancha.com](https://zhongzhuancha.com/)）的 **clean audit-only** 工具：
 给 OpenAI 兼容中转做一次“能不能用、协议面是否像官方”的体检。
 
@@ -67,6 +69,12 @@ relay-audit --base-url https://relay.example/v1 \
 # 从已有证据重出报告，不再发请求
 relay-audit --from-audit _evidence/audit-xxx --out _evidence/report-2
 ```
+
+## 终端演示
+
+![terminal demo](docs/assets/terminal-demo.png)
+
+*真实命令输出。exit 2 表示协议面 inconsistent，报告仍会生成。*
 
 ## 协议自适应
 
