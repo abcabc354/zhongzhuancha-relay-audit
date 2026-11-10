@@ -88,6 +88,8 @@ flowchart LR
 
 Docs are in Chinese for now:
 
+- [Scenarios](docs/scenarios/index.md)
+- [Walkthrough](docs/walkthrough.md)
 - [Checks](docs/checks.md)
 - [Scoring](docs/scoring.md)
 - [Architecture](docs/architecture.md)

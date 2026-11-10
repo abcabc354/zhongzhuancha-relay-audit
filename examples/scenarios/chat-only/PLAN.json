@@ -1,0 +1,21 @@
+{
+  "base_url": "https://relay-a.example/v1",
+  "identity_authenticated": false,
+  "key_source": "demo",
+  "limits": {
+    "batch_seconds": 900,
+    "output_per_request": 2500,
+    "request_seconds": 120,
+    "requests": 25
+  },
+  "mode": "chat",
+  "model": "gpt-6.1-sol",
+  "schema": "gpt-protocol-audit-v1",
+  "scope": "protocol_surface_only_not_model_authentication",
+  "suite": [
+    "responses",
+    "chat",
+    "catalog",
+    "stability"
+  ]
+}

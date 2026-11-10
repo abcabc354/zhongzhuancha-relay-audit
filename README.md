@@ -86,6 +86,8 @@ flowchart LR
 
 ## 文档
 
+- [场景库](docs/scenarios/index.md)
+- [第一次审计](docs/walkthrough.md)
 - [检查项参考](docs/checks.md)
 - [评分口径](docs/scoring.md)
 - [架构](docs/architecture.md)

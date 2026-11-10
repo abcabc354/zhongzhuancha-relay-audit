@@ -1,0 +1,157 @@
+{
+  "_meta": {
+    "duration_s": 42.0,
+    "mode": "responses",
+    "requests": 20,
+    "started_asia": "2026-11-09T20:00:00+08:00"
+  },
+  "cache_retention": {
+    "status": 200
+  },
+  "cap": {
+    "status": 200,
+    "summary": {
+      "status": "completed",
+      "usage": {
+        "output_tokens": 203
+      }
+    }
+  },
+  "catalog_liveness": {
+    "gpt-6.1-sol": 200
+  },
+  "chat": {
+    "json": {
+      "choices": [
+        {
+          "message": {
+            "content": "hi"
+          }
+        }
+      ]
+    },
+    "status": 200
+  },
+  "cross_model": {
+    "status": 200
+  },
+  "effort_high": {
+    "status": 200,
+    "summary": {
+      "usage": {
+        "reasoning_tokens": 192
+      }
+    }
+  },
+  "effort_low": {
+    "status": 200,
+    "summary": {
+      "usage": {
+        "reasoning_tokens": 64
+      }
+    }
+  },
+  "image": {
+    "status": 200,
+    "summary": {
+      "text": "Red"
+    }
+  },
+  "invalid_cap": {
+    "error": {
+      "code": "invalid_request_error"
+    },
+    "status": 400
+  },
+  "invalid_effort": {
+    "error": {
+      "code": "invalid_request_error"
+    },
+    "status": 400
+  },
+  "invalid_model": {
+    "error": {
+      "code": "model_not_found"
+    },
+    "status": 400
+  },
+  "prev_first": {
+    "status": 200,
+    "summary": {
+      "id": "resp_demo_1",
+      "store": true
+    }
+  },
+  "prev_second": {
+    "error": null,
+    "status": 200,
+    "summary": {
+      "text": "teal"
+    }
+  },
+  "responses_min": {
+    "status": 200,
+    "summary": {
+      "instructions_has_codex": false,
+      "instructions_has_gpt5": false,
+      "instructions_len": 0,
+      "output_types": [
+        "message"
+      ],
+      "phases": [
+        "final_answer"
+      ],
+      "status": "completed",
+      "store": false,
+      "text": "Hello",
+      "usage": {
+        "attribution_present": true,
+        "cached_tokens": 0,
+        "input_tokens": 120,
+        "output_tokens": 12,
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "structured": {
+    "status": 200,
+    "summary": {
+      "text": "{\"city\":\"杭州\",\"date\":\"2026-03-14\"}"
+    }
+  },
+  "tools": {
+    "status": 200,
+    "summary": {
+      "text": "B7"
+    }
+  },
+  "unauthorized": {
+    "error": {
+      "code": "invalid_api_key"
+    },
+    "status": 401
+  },
+  "usage_repeat": [
+    {
+      "status": 200,
+      "summary": {
+        "usage": {
+          "input_tokens": 120,
+          "output_tokens": 12
+        }
+      }
+    },
+    {
+      "status": 200,
+      "summary": {
+        "usage": {
+          "input_tokens": 120,
+          "output_tokens": 12
+        }
+      }
+    }
+  ],
+  "verbosity": {
+    "status": 200
+  }
+}

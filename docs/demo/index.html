@@ -18,7 +18,7 @@ h1 span{color:#7dc0ff}
 .links a{color:#fff;border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:8px 14px;text-decoration:none;font-size:13px;background:rgba(255,255,255,.06)}
 .content{max-width:1080px;margin:0 auto;padding:30px 24px 64px}
 .note{color:var(--muted);font-size:14px;margin:0 0 20px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 .card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;color:var(--ink);transition:transform .15s ease,box-shadow .15s ease}
 .card:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(16,24,40,.08)}
 .card .tag{font-size:12px;color:var(--blue);font-weight:650;letter-spacing:.06em}
@@ -45,6 +45,7 @@ footer a{color:var(--blue);text-decoration:none}
     <a class="card" href="report.html"><div class="tag">REPORT</div><h2>单站审计报告</h2><p>结论、可用性记分卡、协议附录和检查明细。</p></a>
     <a class="card" href="compare.html"><div class="tag">COMPARE</div><h2>多站对比</h2><p>同一口径下比较两个目标的可用性、协议面和硬伤。</p></a>
     <a class="card" href="trend.html"><div class="tag">TREND</div><h2>历史趋势</h2><p>可用性覆盖度折线、逐次快照和变化列表。</p></a>
+    <a class="card" href="scenarios/"><div class="tag">SCENARIOS</div><h2>场景库</h2><p>正常、壳、cap、续接、用量漂移的脱敏样例。</p></a>
   </div>
 </main>
 <footer>中转查 · AI 中转站导航与评测 · <a href="https://zhongzhuancha.com/">zhongzhuancha.com</a></footer>

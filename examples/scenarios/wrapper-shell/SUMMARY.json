@@ -1,0 +1,319 @@
+{
+  "results": {
+    "_meta": {
+      "duration_s": 42.0,
+      "mode": "responses",
+      "requests": 20,
+      "started_asia": "2026-11-09T20:00:00+08:00"
+    },
+    "cache_retention": {
+      "status": 200
+    },
+    "cap": {
+      "status": 200,
+      "summary": {
+        "status": "incomplete",
+        "usage": {
+          "output_tokens": 8
+        }
+      }
+    },
+    "catalog_liveness": {
+      "gpt-6.1-sol": 200
+    },
+    "chat": {
+      "json": {
+        "choices": [
+          {
+            "message": {
+              "content": "hi"
+            }
+          }
+        ]
+      },
+      "status": 200
+    },
+    "cross_model": {
+      "status": 200
+    },
+    "effort_high": {
+      "status": 200,
+      "summary": {
+        "usage": {
+          "reasoning_tokens": 192
+        }
+      }
+    },
+    "effort_low": {
+      "status": 200,
+      "summary": {
+        "usage": {
+          "reasoning_tokens": 64
+        }
+      }
+    },
+    "image": {
+      "status": 200,
+      "summary": {
+        "text": "Red"
+      }
+    },
+    "invalid_cap": {
+      "error": {
+        "code": "invalid_request_error"
+      },
+      "status": 400
+    },
+    "invalid_effort": {
+      "error": {
+        "code": "invalid_request_error"
+      },
+      "status": 400
+    },
+    "invalid_model": {
+      "error": {
+        "code": "model_not_found"
+      },
+      "status": 400
+    },
+    "prev_first": {
+      "status": 200,
+      "summary": {
+        "id": "resp_demo_1",
+        "store": true
+      }
+    },
+    "prev_second": {
+      "error": null,
+      "status": 200,
+      "summary": {
+        "text": "teal"
+      }
+    },
+    "responses_min": {
+      "status": 200,
+      "summary": {
+        "instructions_has_codex": true,
+        "instructions_has_gpt5": true,
+        "instructions_len": 21334,
+        "output_types": [
+          "message"
+        ],
+        "phases": [
+          "final_answer"
+        ],
+        "status": "completed",
+        "store": false,
+        "text": "Hello",
+        "usage": {
+          "attribution_present": true,
+          "cached_tokens": 0,
+          "input_tokens": 120,
+          "output_tokens": 12,
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "structured": {
+      "status": 200,
+      "summary": {
+        "text": "{\"city\":\"杭州\",\"date\":\"2026-03-14\"}"
+      }
+    },
+    "tools": {
+      "status": 200,
+      "summary": {
+        "text": "B7"
+      }
+    },
+    "unauthorized": {
+      "error": {
+        "code": "invalid_api_key"
+      },
+      "status": 401
+    },
+    "usage_repeat": [
+      {
+        "status": 200,
+        "summary": {
+          "usage": {
+            "input_tokens": 120,
+            "output_tokens": 12
+          }
+        }
+      },
+      {
+        "status": 200,
+        "summary": {
+          "usage": {
+            "input_tokens": 120,
+            "output_tokens": 12
+          }
+        }
+      }
+    ],
+    "verbosity": {
+      "status": 200
+    }
+  },
+  "verdict": {
+    "counts": {
+      "fail": 0,
+      "info": 3,
+      "pass": 19,
+      "warn": 2
+    },
+    "findings": [
+      {
+        "code": "responses.surface",
+        "evidence": {},
+        "level": "pass",
+        "message": "Responses surface returned a completed response"
+      },
+      {
+        "code": "responses.attribution",
+        "evidence": {},
+        "level": "pass",
+        "message": "usage.attribution present"
+      },
+      {
+        "code": "responses.reasoning_items",
+        "evidence": {},
+        "level": "info",
+        "message": "no reasoning item in this short call"
+      },
+      {
+        "code": "responses.final_answer",
+        "evidence": {},
+        "level": "pass",
+        "message": "message phase=final_answer"
+      },
+      {
+        "code": "reasoning.scaling",
+        "evidence": {},
+        "level": "pass",
+        "message": "reasoning tokens increase with effort"
+      },
+      {
+        "code": "previous.roundtrip",
+        "evidence": {},
+        "level": "pass",
+        "message": "previous_response_id roundtrip works"
+      },
+      {
+        "code": "invalid.parameter",
+        "evidence": {},
+        "level": "pass",
+        "message": "invalid reasoning.effort rejected as invalid_request_error"
+      },
+      {
+        "code": "error.invalid_model",
+        "evidence": {},
+        "level": "pass",
+        "message": "invalid model rejected with an official-looking error"
+      },
+      {
+        "code": "error.invalid_cap",
+        "evidence": {},
+        "level": "pass",
+        "message": "max_output_tokens=0 rejected as invalid_request_error"
+      },
+      {
+        "code": "error.unauthorized",
+        "evidence": {},
+        "level": "pass",
+        "message": "missing credential rejected with an auth error"
+      },
+      {
+        "code": "output.cap",
+        "evidence": {},
+        "level": "pass",
+        "message": "max_output_tokens honored"
+      },
+      {
+        "code": "image.vision",
+        "evidence": {},
+        "level": "pass",
+        "message": "image input answered correctly"
+      },
+      {
+        "code": "chat.surface",
+        "evidence": {},
+        "level": "pass",
+        "message": "Chat Completions surface works"
+      },
+      {
+        "code": "catalog.liveness",
+        "evidence": {},
+        "level": "pass",
+        "message": "all sampled catalog models answered"
+      },
+      {
+        "code": "usage.stability",
+        "evidence": {},
+        "level": "pass",
+        "message": "input_tokens stable across repeats"
+      },
+      {
+        "code": "store.echo",
+        "evidence": {},
+        "level": "pass",
+        "message": "store flag echoed as expected"
+      },
+      {
+        "code": "cache.retention",
+        "evidence": {},
+        "level": "pass",
+        "message": "prompt_cache_retention accepted"
+      },
+      {
+        "code": "text.verbosity",
+        "evidence": {},
+        "level": "pass",
+        "message": "text.verbosity echoed as low"
+      },
+      {
+        "code": "tools.function_call",
+        "evidence": {},
+        "level": "pass",
+        "message": "Responses function call produced with expected args"
+      },
+      {
+        "code": "structured.output",
+        "evidence": {},
+        "level": "pass",
+        "message": "JSON schema output matched"
+      },
+      {
+        "code": "identity.undetermined",
+        "evidence": {},
+        "level": "info",
+        "message": "protocol surface only; model identity is not authenticated"
+      },
+      {
+        "code": "wrapper.instructions",
+        "evidence": {
+          "head": "You are Codex, an agent based on GPT-5.",
+          "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        },
+        "level": "info",
+        "message": "relay injects 21334 chars of instructions"
+      },
+      {
+        "code": "wrapper.persona",
+        "evidence": {},
+        "level": "warn",
+        "message": "injected instructions declare Codex/GPT-5 persona"
+      },
+      {
+        "code": "wrapper.shared",
+        "evidence": {},
+        "level": "warn",
+        "message": "model labels use the same injected instructions"
+      }
+    ],
+    "identity_authenticated": false,
+    "model_identity": "undetermined",
+    "status": "partial"
+  }
+}

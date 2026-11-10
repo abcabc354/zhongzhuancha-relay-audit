@@ -1,0 +1,166 @@
+{
+  "results": {
+    "_meta": {
+      "duration_s": 18.0,
+      "mode": "chat",
+      "requests": 9,
+      "started_asia": "2026-11-09T20:00:00+08:00"
+    },
+    "catalog_liveness": {
+      "gpt-6.1-sol": 200
+    },
+    "chat": {
+      "json": {
+        "choices": [
+          {
+            "message": {
+              "content": "hi"
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 14
+        }
+      },
+      "status": 200
+    },
+    "chat_stream": {
+      "finish_reason": "stop",
+      "status": 200,
+      "text": "hi"
+    },
+    "chat_structured": {
+      "json": {
+        "choices": [
+          {
+            "message": {
+              "content": "{\"city\":\"杭州\",\"date\":\"2026-03-14\"}"
+            }
+          }
+        ]
+      },
+      "status": 200
+    },
+    "chat_tools": {
+      "json": {
+        "choices": [
+          {
+            "message": {
+              "tool_calls": [
+                {
+                  "function": {
+                    "arguments": "{\"sku\":\"B7\"}",
+                    "name": "lookup_inventory"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": 200
+    },
+    "chat_vision": {
+      "json": {
+        "choices": [
+          {
+            "message": {
+              "content": "Red"
+            }
+          }
+        ]
+      },
+      "status": 200
+    },
+    "usage_repeat": [
+      {
+        "json": {
+          "usage": {
+            "prompt_tokens": 14
+          }
+        },
+        "status": 200
+      },
+      {
+        "json": {
+          "usage": {
+            "prompt_tokens": 14
+          }
+        },
+        "status": 200
+      }
+    ]
+  },
+  "verdict": {
+    "counts": {
+      "fail": 0,
+      "info": 1,
+      "pass": 7,
+      "warn": 0
+    },
+    "findings": [
+      {
+        "code": "chat.surface",
+        "evidence": null,
+        "level": "pass",
+        "message": "Chat Completions surface works"
+      },
+      {
+        "code": "chat.stream",
+        "evidence": null,
+        "level": "pass",
+        "message": "streaming completion finished with content"
+      },
+      {
+        "code": "chat.tools",
+        "evidence": null,
+        "level": "pass",
+        "message": "Chat function call produced with expected args"
+      },
+      {
+        "code": "chat.structured",
+        "evidence": null,
+        "level": "pass",
+        "message": "Chat JSON schema output matched"
+      },
+      {
+        "code": "chat.vision",
+        "evidence": null,
+        "level": "pass",
+        "message": "Chat image input answered correctly"
+      },
+      {
+        "code": "usage.stability",
+        "evidence": {
+          "values": [
+            14,
+            14
+          ]
+        },
+        "level": "pass",
+        "message": "prompt_tokens stable across repeats"
+      },
+      {
+        "code": "catalog.liveness",
+        "evidence": {
+          "checked": {
+            "gpt-6.1-sol": 200
+          },
+          "failed": {}
+        },
+        "level": "pass",
+        "message": "all sampled catalog models answered"
+      },
+      {
+        "code": "identity.undetermined",
+        "evidence": null,
+        "level": "info",
+        "message": "protocol surface only; model identity is not authenticated"
+      }
+    ],
+    "identity_authenticated": false,
+    "mode": "chat",
+    "model_identity": "undetermined",
+    "status": "consistent"
+  }
+}
