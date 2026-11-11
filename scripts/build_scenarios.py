@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from relay_audit import relay_audit  # noqa: E402
+from relay_audit.html_meta import SITE_URL, meta_tags  # noqa: E402
 
 DEST = ROOT / 'docs' / 'demo' / 'scenarios'
 FIXTURES = ROOT / 'examples' / 'scenarios'
@@ -30,6 +31,7 @@ INDEX = '''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>中转查 · relay-audit · 场景库</title>
+{social}
 <style>
 :root{{--bg:#f5f7fa;--panel:#fff;--ink:#1f2328;--muted:#667085;--line:#e4e7ec;--blue:#1f5fbf}}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}}
@@ -84,7 +86,11 @@ def build():
             f'<a class="card" href="{slug}/REPORT.html">'
             f'<div class="tag">SCENARIO</div><h2>{title}</h2>'
             f'<p><code>{slug}</code> · {expected}</p></a>')
-    (DEST / 'index.html').write_text(INDEX.format(cards='\n'.join(cards)), encoding='utf-8')
+    (DEST / 'index.html').write_text(INDEX.format(cards='\n'.join(cards), social=meta_tags(
+            '中转查 · relay-audit · 场景库',
+            '六个脱敏场景：正常 Responses、Chat-only 回退、壳、cap 忽略、续接不支持、用量漂移。',
+            f'{SITE_URL}/demo/scenarios/',
+        )), encoding='utf-8')
     print(f'built {len(SCENARIOS)} scenarios in {DEST}')
 
 

@@ -8,6 +8,7 @@ from pathlib import Path
 
 from . import protocol_audit, protocol_scorecard
 from .evidence import ContractError, read_json, save, stamp, write_manifest
+from .html_meta import meta_tags
 
 SCHEMA = 'relay-audit-report-v1'
 
@@ -128,12 +129,18 @@ def render_html(plan, results, verdict, scorecard, source):
     evidence = ', '.join(sorted(
         p.name for p in Path(source).iterdir() if p.is_file())) if Path(source).is_dir() else '-'
     generated = meta.get('started_asia') or stamp()
+    social = meta_tags(
+        f'中转查 · 协议面审计 — {target["name"]}',
+        f'{target["name"]} 的协议面审计：{status}，可用性 {overall["grade"]} '
+        f'({overall["coverage"]}%)。',
+    )
     return f'''<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>中转查 · 协议面审计 — {esc(target["name"])}</title>
+{social}
 <style>
 :root {{ --bg:#f6f7f9; --panel:#fff; --ink:#1f2328; --muted:#667085; --line:#e4e7ec;
          --pass:#137a4b; --warn:#a15c00; --fail:#b42318; --info:#475467; --na:#98a2b3; }}

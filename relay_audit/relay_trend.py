@@ -7,6 +7,7 @@ from pathlib import Path
 
 from . import protocol_scorecard
 from .evidence import ContractError, read_json, save, stamp, write_manifest
+from .html_meta import SITE_URL, meta_tags
 from .relay_compare import HARD
 
 SCHEMA = 'relay-trend-v1'
@@ -178,10 +179,16 @@ def render_html(series):
   <tbody>{''.join(rows)}</tbody></table>
   <h3>变化</h3><ul>{''.join(f"<li>{esc(text)}</li>" for text in changes)}</ul>
 </section>''')
+    social = meta_tags(
+        '中转查 · 历史趋势',
+        '同一中转多次审计的可用性、协议面与包装变化趋势，全部为脱敏示例。',
+        f'{SITE_URL}/demo/trend.html',
+    )
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>中转查 · 历史趋势</title>
+{social}
 <style>
 :root {{ --bg:#f6f7f9; --panel:#fff; --ink:#1f2328; --muted:#667085; --line:#e4e7ec;
          --pass:#137a4b; --warn:#a15c00; --fail:#b42318; }}

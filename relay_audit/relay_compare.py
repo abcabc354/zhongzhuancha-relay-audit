@@ -6,6 +6,7 @@ from pathlib import Path
 
 from . import protocol_scorecard
 from .evidence import ContractError, read_json, save, stamp, write_manifest
+from .html_meta import SITE_URL, meta_tags
 
 SCHEMA = 'relay-compare-v1'
 HARD = {
@@ -140,10 +141,16 @@ def render_html(rows):
             f' ({row["usability"]["coverage"]}%)</span></td>'
             f'{cells}'
             f'<td>{len(row["hard_fails"])}</td></tr>')
+    social = meta_tags(
+        '中转查 · 中转对比',
+        '多家 OpenAI 兼容中转的协议面、可用性与硬伤对比，全部为脱敏示例。',
+        f'{SITE_URL}/demo/compare.html',
+    )
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>中转查 · 中转对比</title>
+{social}
 <style>
 :root {{ --bg:#f6f7f9; --panel:#fff; --ink:#1f2328; --muted:#667085; --line:#e4e7ec;
          --pass:#137a4b; --warn:#a15c00; --fail:#b42318; }}
