@@ -57,9 +57,9 @@
 ```sh
 python3.11 -m venv .venv
 . .venv/bin/activate
-pip install relay_audit-0.1.2-py3-none-any.whl
+pip install zhongzhuancha_relay_audit-0.2.0-py3-none-any.whl
 
-relay-audit --base-url https://relay.example/v1 \
+zzc-audit --base-url https://relay.example/v1 \
   --api-key-file config/relay-a.local.env \
   --out _evidence/report --enable-remote
 ```
@@ -69,6 +69,8 @@ relay-audit --base-url https://relay.example/v1 \
 ```sh
 pip install -e .
 ```
+
+> 兼容：旧的 `relay-audit` / `relay-audit-compare` / `relay-audit-trend` / `relay-inspect` 仍保留；新项目请使用 `zzc-*`。
 
 ## 工作流
 

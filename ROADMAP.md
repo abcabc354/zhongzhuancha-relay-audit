@@ -80,7 +80,7 @@ docs/scenarios/
 
 全部脱敏：目标名 `relay-a` / `relay-b`，URL `relay-*.example`，不含 key。
 
-`scripts/build_scenarios.py` 用 `relay-audit --from-audit` 生成到
+`scripts/build_scenarios.py` 用 `zzc-audit --from-audit` 生成到
 `docs/demo/scenarios/<slug>/`，不手写报告 HTML。
 
 六个场景：
@@ -144,7 +144,7 @@ Set FontSize 14
 Set Width 1100
 Set Height 560
 Set Theme "Dracula"
-Type "relay-audit --from-audit examples/scenarios/responses-good --name relay-a --out demo-report"
+Type "zzc-audit --from-audit examples/scenarios/responses-good --name relay-a --out demo-report"
 Enter
 Sleep 3s
 Type "ls demo-report"
@@ -167,8 +167,8 @@ Sleep 2s
 
 新增 `docs/cli.md`：
 
-- `relay-audit` 全部参数；
-- `relay-audit-compare` / `trend` / `inspect`；
+- `zzc-audit` 全部参数；
+- `zzc-compare` / `zzc-trend` / `zzc-inspect`；
 - key 文件字段（`OPENAI_API_KEY` / `OPENAI_BASE_URL`）；
 - 环境变量；
 - 退出码：

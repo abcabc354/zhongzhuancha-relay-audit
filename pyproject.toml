@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "relay-audit"
-version = "0.1.2"
-description = "Zhongzhuancha clean audit-only toolkit for OpenAI-compatible relays"
+name = "zhongzhuancha-relay-audit"
+version = "0.2.0"
+description = "Zhongzhuancha relay audit: check whether an OpenAI-compatible relay works and whether its protocol surface looks official"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
@@ -21,6 +21,10 @@ relay-audit = "relay_audit.relay_audit:main"
 relay-audit-compare = "relay_audit.relay_compare:main"
 relay-audit-trend = "relay_audit.relay_trend:main"
 relay-inspect = "relay_audit.relay_inspect:main"
+zzc-audit = "relay_audit.relay_audit:main"
+zzc-compare = "relay_audit.relay_compare:main"
+zzc-trend = "relay_audit.relay_trend:main"
+zzc-inspect = "relay_audit.relay_inspect:main"
 
 [tool.setuptools.packages.find]
 include = ["relay_audit*"]

@@ -2,12 +2,14 @@
 
 目标：5 分钟内跑出第一份报告，并知道看哪里。
 
+> 旧命令 `relay-audit` 等仍可用；下面统一用新的 `zzc-*`。
+
 ## 0. 准备
 
 ```sh
 python3.11 -m venv .venv
 . .venv/bin/activate
-pip install relay_audit-0.1.2-py3-none-any.whl
+pip install zhongzhuancha_relay_audit-0.2.0-py3-none-any.whl
 ```
 
 ## 1. 建 key 文件
@@ -21,12 +23,12 @@ EOF
 chmod 600 config/relay-a.local.env
 ```
 
-`relay-audit` 只从 0600 文件或环境变量读 key；不会把 key 写进报告/证据。
+`zzc-audit` 只从 0600 文件或环境变量读 key；不会把 key 写进报告/证据。
 
 ## 2. 先 dry-run
 
 ```sh
-relay-audit \
+zzc-audit \
   --base-url https://relay.example/v1 \
   --api-key-file config/relay-a.local.env \
   --out _evidence/first-run
@@ -37,7 +39,7 @@ relay-audit \
 ## 3. 真实审计
 
 ```sh
-relay-audit \
+zzc-audit \
   --base-url https://relay.example/v1 \
   --api-key-file config/relay-a.local.env \
   --out _evidence/first-run \
@@ -83,7 +85,7 @@ _evidence/first-run/
 不用手动指定；默认就是 auto：
 
 ```sh
-relay-audit --base-url https://relay.example/v1 \
+zzc-audit --base-url https://relay.example/v1 \
   --api-key-file config/relay-a.local.env \
   --out _evidence/chat-only --enable-remote
 ```
@@ -93,14 +95,14 @@ relay-audit --base-url https://relay.example/v1 \
 ## 7. 重出报告
 
 ```sh
-relay-audit --from-audit _evidence/first-run/AUDIT --out _evidence/re-render
+zzc-audit --from-audit _evidence/first-run/AUDIT --out _evidence/re-render
 ```
 
 不发请求，只重新渲染。
 
 ## 8. 下一步
 
-- 多目标：[relay-audit-compare](https://github.com/abcabc354/zhongzhuancha-relay-audit#readme)
-- 历史趋势：[relay-audit-trend](https://github.com/abcabc354/zhongzhuancha-relay-audit#readme)
+- 多目标：[zzc-compare](https://github.com/abcabc354/zhongzhuancha-relay-audit#readme)
+- 历史趋势：[zzc-trend](https://github.com/abcabc354/zhongzhuancha-relay-audit#readme)
 - 看不同协议面：[场景库](scenarios/index.md)
 - 看报告样例：[Live demo](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/)
