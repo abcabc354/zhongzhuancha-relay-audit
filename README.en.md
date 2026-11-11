@@ -98,6 +98,7 @@ Docs are in Chinese for now:
 - [FAQ](docs/faq.md)
 - [Examples](docs/examples.md)
 - [Roadmap](ROADMAP.md)
+- [PyPI publishing](docs/publishing.md)
 - [Live demo](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/)
 
 ## Contributing and security

@@ -96,6 +96,7 @@ flowchart LR
 - [FAQ](docs/faq.md)
 - [示例](docs/examples.md)
 - [Roadmap](ROADMAP.md)
+- [PyPI 发布](docs/publishing.md)
 - [Live demo](https://abcabc354.github.io/zhongzhuancha-relay-audit/demo/)
 
 ## 参与
