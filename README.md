@@ -17,6 +17,7 @@
 
 <p align="center">
   <a href="https://www.python.org/"><img src="docs/assets/badges/python.svg" alt="Python 3.11+"></a>
+  <a href="https://pypi.org/project/zhongzhuancha-relay-audit/"><img src="https://img.shields.io/pypi/v/zhongzhuancha-relay-audit.svg" alt="PyPI"></a>
   <a href="docs/checks.md"><img src="docs/assets/badges/protocol.svg" alt="Responses + Chat"></a>
   <a href="#"><img src="docs/assets/badges/public.svg" alt="public alpha"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.svg" alt="MIT"></a>
