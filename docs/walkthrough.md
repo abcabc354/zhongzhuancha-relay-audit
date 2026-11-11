@@ -9,7 +9,7 @@
 ```sh
 python3.11 -m venv .venv
 . .venv/bin/activate
-pip install zhongzhuancha_relay_audit-0.2.0-py3-none-any.whl
+pip install zhongzhuancha-relay-audit
 ```
 
 ## 1. 建 key 文件

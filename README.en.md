@@ -57,7 +57,7 @@ If this project helps you, a Star :star: is appreciated.
 ```sh
 python3.11 -m venv .venv
 . .venv/bin/activate
-pip install zhongzhuancha_relay_audit-0.2.0-py3-none-any.whl
+pip install zhongzhuancha-relay-audit
 
 zzc-audit --base-url https://relay.example/v1 \
   --api-key-file config/relay-a.local.env \

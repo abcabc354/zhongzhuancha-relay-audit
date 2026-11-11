@@ -76,3 +76,8 @@ python -m twine upload dist/*
 ```
 
 token 只放本机/密码管理器，不提交到仓库。
+
+## 当前状态
+
+- 0.2.0 已通过 Trusted Publishing 发布。
+- 验证：`pip install zhongzhuancha-relay-audit`，然后 `zzc-audit --help`。
