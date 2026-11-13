@@ -33,7 +33,7 @@
 
 ## About
 
-**Zhongzhuancha** ([zhongzhuancha.com](https://zhongzhuancha.com/)) is an AI relay directory and review site.
+**Zhongzhuancha** ([AI relay directory & reviews](https://zhongzhuancha.com/)) is an AI relay directory and review site.
 This repository is its **clean audit-only** toolkit: it answers “does it work, and does the protocol surface look official?” It does not authenticate model identity.
 
 - Probes `/responses` first and falls back to Chat-only;

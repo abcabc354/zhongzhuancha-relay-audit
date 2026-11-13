@@ -33,7 +33,7 @@
 
 ## 关于
 
-**中转查**（[zhongzhuancha.com](https://zhongzhuancha.com/)）是一个 AI 中转站导航与评测站。
+**中转查**（[AI 中转站导航与评测](https://zhongzhuancha.com/)）是一个 AI 中转站导航与评测站。
 这个仓库是它的 **clean audit-only** 工具：只回答“能不能用、协议面是否像官方”，不认证型号身份。
 
 - 先探 `/responses`，不支持就自动回退 Chat-only；
